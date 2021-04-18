@@ -5,8 +5,12 @@ import img2 from "../../assets/4BStudio.png";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-function Content() {
-    AOS.init();
+class Content extends React.Component {
+    componentDidMount() {
+        AOS.init();
+    
+    }
+    render(){
   return (
     <div className="container-fluid Content">
         <img src={img1} alt="1.jpg"/>
@@ -45,6 +49,7 @@ function Content() {
 
     </div>
   );
+    }
 }
 
 export default Content;
